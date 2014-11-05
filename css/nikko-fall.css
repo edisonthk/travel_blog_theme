@@ -1,0 +1,182 @@
+body {
+	background: #fff url(../images/nikko-fall/background.png) repeat;
+}
+
+header{
+	background: url(../images/header_1.jpg);
+	background-size: cover;
+	width: 100%;
+	height: 300px;
+	z-index: 0;
+}
+
+.quote:before {
+
+	background-size: 20px 20px;
+	background-image: url(../images/nikko-fall/open-quote.png);
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	content: "";
+	
+}
+.quote:after {
+	background-size: 20px 20px;
+	background-image: url(../images/nikko-fall/close-quote.png);
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	content: "";
+}
+.align-middle {
+	text-align: center;
+}
+
+header #header_title {
+	position: absolute;
+	z-index: 1;
+	top: 150px;
+	right: 100px;
+}
+
+header #header_title *{
+	color: white;
+}
+
+#header_datetime {
+	text-align: right;
+	background-color: white;
+}
+
+#header_datetime .meta {
+	line-height: 60px;
+	height: 60px;
+	vertical-align: middle;
+	display: inline-block;
+}
+
+#header_datetime .meta img.inline {
+	height: 40px;
+	width: 40px;
+}
+
+section {
+	margin-top: 20px;
+	min-height: 450px;
+}
+
+section .container .row img {
+	width: 100%;
+	height: auto;
+}
+
+p, h3 {
+	color:black;
+}
+p {
+	font-size: 20px;
+}
+
+section .container .row img.icon_offset.icon_offset_1 {
+	top:0px;
+	z-index:2;
+}
+section .container .row img.icon_offset.icon_offset_2 {
+	top:100px;
+	right:80%;
+	z-index:1
+}
+section .container .row img.icon_offset.icon_offset_4 {
+	top:150px;
+	left:85%;
+}
+
+section .container .row img.icon_offset {
+	width: 80%;
+	height: auto;
+	position: absolute;
+}
+
+footer {
+	padding-top: 20px;
+	background-color: #303030;
+	height: 230px;
+	width: 100%;
+}
+footer p, footer a{
+	color: #f9a799;
+}
+
+footer a {
+	font-size: 20px;
+	display: block;
+	margin-bottom: 20px;
+}
+
+.icon-aki {
+	font-size: 20px;
+}
+.icon-aki:before {
+	padding-right: 10px;
+	content: url(../images/nikko-fall/icon_maple.png);
+}
+
+.icon-profile:before {
+	padding-right: 10px;
+	content: url(../images/nikko-fall/icon_profile.png);
+}
+
+.icon-work:before {
+	padding-right: 10px;
+	content: url(../images/nikko-fall/icon_work.png);
+}
+
+section.empty-section {
+	min-height: 200px;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) { 
+	section {
+		margin-top: 50px;
+		min-height: 550px;
+	}
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (max-width: 979px) { 
+
+	section .container .row img.icon_offset {
+		width: 50%;
+	}
+	section .container .row img.icon_offset {
+		position: relative;
+		width: 100%;
+	}
+	section .container .row img.icon_offset.icon_offset_1,
+	section .container .row img.icon_offset.icon_offset_2,
+	section .container .row img.icon_offset.icon_offset_3,
+	section .container .row img.icon_offset.icon_offset_4
+	 {
+	 	width: 100%;
+		top: 0px;	
+		left: 0px;
+		margin-top:10px;
+		margin-bottom:10px;
+	}
+}
+ 
+
+/* Landscape phones and down */
+@media (max-width: 480px) {  
+	header #header_title {
+		width: 100%;
+		position: relative;
+		
+		right: 0;
+		left: 0;
+		display: block;
+		text-align: center;
+	}
+}

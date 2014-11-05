@@ -44,7 +44,7 @@ Template Name: 秋の日光
 				</div>
 			</div>
 		</div>
-		<section>
+		<section class="offset-wrapper-2">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7">
@@ -62,7 +62,7 @@ Template Name: 秋の日光
 			<div class="container">
 				<div class="row">
 					<div class="col-md-7 right-on-desktop">
-						<img src="<?= get_template_directory_uri() ?>/images/nikko-fall/1_1.jpg">
+						<img class="offset-wrapper-3" src="<?= get_template_directory_uri() ?>/images/nikko-fall/1_1.jpg">
 					</div>
 					<div class="col-md-5 left-on-desktop">
 						<p>日光へ着きました！そして、最初の目的地は</p>
@@ -146,7 +146,7 @@ Template Name: 秋の日光
 					<div class="col-md-7">
 						<img src="<?= get_template_directory_uri() ?>/images/nikko-fall/6.jpg">
 					</div>
-					<div class="col-md-5">
+					<div class="col-md-5 offset-wrapper-1">
 						<p>もみじラインに車が泊まれる場所は複数があったので、そこで車を泊まって山の景色を眺めたり、紅葉の写真を撮ったりしました。</p>
 						<p>これで、今回の紅葉狩りは赤い紅葉に包まれながら終止符を打ちました。</p>
 					</div>

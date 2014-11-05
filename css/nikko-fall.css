@@ -142,7 +142,24 @@ section.empty-section {
 		min-height: 550px;
 	}
 
+	.left-on-desktop {
+		float:left;
+	}
+	.right-on-desktop {
+		float:right;
+	}
+
 }
+
+@media (min-width: 980px) and (max-width: 1199px) { 
+	.left-on-desktop {
+		float:left;
+	}
+	.right-on-desktop {
+		float:right;
+	}
+}
+
  
 /* Portrait tablet to landscape and desktop */
 @media (max-width: 979px) { 
@@ -166,24 +183,26 @@ section.empty-section {
 		margin-bottom:10px;
 	}
 }
- 
 
 /* Landscape phones and down */
 @media (max-width: 480px) {  
 	header #header_title {
 		width: 100%;
 		position: relative;
-		
 		right: 0;
 		left: 0;
 		display: block;
 		text-align: center;
+	}
+	img.icon {
+		width: auto;
+		height: 45px;
 	}
 
 	section {
 		min-height: 350px;
 	}
 	p {
-		font-size: 15px;
+		font-size: 16px;
 	}
 }

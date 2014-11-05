@@ -61,14 +61,14 @@ Template Name: 秋の日光
 		<section>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-5">
+					<div class="col-md-7 right-on-desktop">
+						<img src="<?= get_template_directory_uri() ?>/images/nikko-fall/1_1.jpg">
+					</div>
+					<div class="col-md-5 left-on-desktop">
 						<p>日光へ着きました！そして、最初の目的地は</p>
 						<p class="quote align-middle">華厳の滝</p>
 						<p>になります。高速道路で見かけた景色と裏腹、木が全部枯れました(T.T)。でも、紅葉は見れなかったのですが、華厳の滝の絶景で満喫しました。</p>
-						<p>一半時間ぐらい滞在したら、次の場所へ目指します！次こそ紅葉は見えるように</p>
-					</div>
-					<div class="col-md-7">
-						<img src="<?= get_template_directory_uri() ?>/images/nikko-fall/1_1.jpg">
+						<p>一時間半ぐらい滞在したら、次の場所へ目指します！次こそ紅葉は見えるように</p>
 					</div>
 				</div>
 			</div>
@@ -92,12 +92,12 @@ Template Name: 秋の日光
 		<section>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-5">
-						<p class="quote align-middle">紅葉狩り＠霧降の滝</p>
-					</div>
-					<div class="col-md-7">
+					<div class="col-md-7 right-on-desktop">
 						<img class="icon_offset icon_offset_1" src="<?= get_template_directory_uri() ?>/images/nikko-fall/3_1.jpg">
 						<img class="icon_offset icon_offset_2" src="<?= get_template_directory_uri() ?>/images/nikko-fall/3_2.jpg">
+					</div>
+					<div class="col-md-5 left-on-desktop">
+						<p class="quote align-middle">紅葉狩り＠霧降の滝</p>
 					</div>
 				</div>
 			</div>
@@ -115,14 +115,14 @@ Template Name: 秋の日光
 		<section>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-5">
+					<div class="col-md-7 left-on-desktop">
+						<img src="<?= get_template_directory_uri() ?>/images/nikko-fall/4_1.jpg">
+					</div>
+					<div class="col-md-5 right-on-desktop">
 						<p>日がだいぶ暮れたので、急いで最後の目的地に向かいました。それは</p>
 						<p class="align-middle quote">もみじライン</p>
 						<p>です。霧降の滝から２時間を運転して着きました。もみじラインは有料道路なんですが、まるで一般的な山道のようだ...</p>
 						<p>と思いきや、真赤の紅葉が目の前に現れました！</p>
-					</div>
-					<div class="col-md-7">
-						<img src="<?= get_template_directory_uri() ?>/images/nikko-fall/4_1.jpg">
 					</div>
 				</div>
 			</div>

@@ -179,4 +179,11 @@ section.empty-section {
 		display: block;
 		text-align: center;
 	}
+
+	section {
+		min-height: 350px;
+	}
+	p {
+		font-size: 15px;
+	}
 }

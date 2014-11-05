@@ -28,7 +28,7 @@ Template Name: 秋の日光
 		<header>
 			<div class="topbar">
 				<a href="/"><img class="icon" src="<?= get_template_directory_uri() ?>/images/icon@white.png"></a>
-				<button class="lines-button x" onclick="menuToggle(this);"><span class="lines"></span></button>
+				<button class="lines-button x" onclick="toggleMenu();"><span class="lines"></span></button>
 			</div>
 			<div id="header_title">
 				<h1>紅葉狩り@日光</h1>
@@ -160,8 +160,8 @@ Template Name: 秋の日光
 						<p class="icon-aki">秋の日光</p>
 					</div>
 					<div class="col-md-6">
-						<a class="icon-profile" href="#">作者について</a>
-						<a class="icon-work" href="#">他の仕事について</a>
+						<a class="icon-profile" onclick="toggleMenu();" href="#">作者について</a>
+						<a class="icon-work" onclick="toggleMenu();" href="#">他の仕事について</a>
 					</div>
 				</div>
 			</div>

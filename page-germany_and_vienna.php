@@ -27,7 +27,7 @@ Template Name: Germany and Vienna
 			<header>
 				<div class="topbar">
 					<a href="/"><img class="icon" src="<?= get_template_directory_uri() ?>/images/icon.png"></a>
-					<button class="lines-button x" onclick="menuToggle(this);"><span class="lines"></span></button>
+					<button class="lines-button x" onclick="toggleMenu();"><span class="lines"></span></button>
 				</div>
 				<div class="inline-block">
 					<h1 class="title">ベルリン - ミュンヘン - ウィーン</h1>
@@ -71,7 +71,7 @@ Template Name: Germany and Vienna
 					<div class="article-meta">
 						<h2>
 							<a href="#"><img class="left-side" src="<?= get_template_directory_uri() ?>/images/icon_profile.png">&nbsp;プロファイル</a><br />
-							<a href="#" onclick="menuToggle(this);">その他の工作<img class="right-side" src="<?= get_template_directory_uri() ?>/images/icon_work.png"></a><br />
+							<a href="#" onclick="toggleMenu();">その他の工作<img class="right-side" src="<?= get_template_directory_uri() ?>/images/icon_work.png"></a><br />
 						</h2>
 					</div>
 				</article>

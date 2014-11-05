@@ -16,7 +16,7 @@ function isMobile(){
 }
 
 
-function menuToggle(){
+function toggleMenu(){
 	var _e = $(".lines-button");
 	var _i = $(".lines-button").find(".lines");
 	var _m = $("#menu-body");

@@ -47,7 +47,7 @@ Template Name: 秋の日光
 		<section class="offset-wrapper-2">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-7">
+					<div class="col-md-7 img-block">
 						<img src="<?= get_template_directory_uri() ?>/images/nikko-fall/1.jpg">
 					</div>
 					<div class="col-md-5">
@@ -61,7 +61,7 @@ Template Name: 秋の日光
 		<section>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-7 right-on-desktop">
+					<div class="col-md-7 right-on-desktop img-block">
 						<img class="offset-wrapper-3" src="<?= get_template_directory_uri() ?>/images/nikko-fall/1_1.jpg">
 					</div>
 					<div class="col-md-5 left-on-desktop">
@@ -76,7 +76,7 @@ Template Name: 秋の日光
 		<section>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-7">
+					<div class="col-md-7 img-block">
 						<img src="<?= get_template_directory_uri() ?>/images/nikko-fall/2.jpg">
 					</div>
 					<div class="col-md-5">
@@ -92,7 +92,7 @@ Template Name: 秋の日光
 		<section>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-7 right-on-desktop">
+					<div class="col-md-7 right-on-desktop img-block">
 						<img class="icon_offset icon_offset_1" src="<?= get_template_directory_uri() ?>/images/nikko-fall/3_1.jpg">
 						<img class="icon_offset icon_offset_2" src="<?= get_template_directory_uri() ?>/images/nikko-fall/3_2.jpg">
 					</div>
@@ -115,7 +115,7 @@ Template Name: 秋の日光
 		<section>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-7 left-on-desktop">
+					<div class="col-md-7 left-on-desktop img-block">
 						<img src="<?= get_template_directory_uri() ?>/images/nikko-fall/4_1.jpg">
 					</div>
 					<div class="col-md-5 right-on-desktop">
@@ -130,7 +130,7 @@ Template Name: 秋の日光
 		<section>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-7">
+					<div class="col-md-7 img-block">
 						<img class="icon_offset icon_offset_3" src="<?= get_template_directory_uri() ?>/images/nikko-fall/4.jpg">
 						<img class="icon_offset icon_offset_4" src="<?= get_template_directory_uri() ?>/images/nikko-fall/5.jpg">
 					</div>
@@ -143,7 +143,7 @@ Template Name: 秋の日光
 		<section>
 			<div class="container">
 				<div class="row">
-					<div class="col-md-7">
+					<div class="col-md-7 img-block">
 						<img src="<?= get_template_directory_uri() ?>/images/nikko-fall/6.jpg">
 					</div>
 					<div class="col-md-5 offset-wrapper-1">
@@ -177,6 +177,41 @@ Template Name: 秋の日光
 	        }
 	        
 	    });
+
+		$(function(){
+			var doit;
+			window.onresize = function(){
+				clearTimeout(doit);
+				// doing the resizedDoneAction every 100 milliseconds
+			  	doit = setTimeout(function(){
+			  		updateView();
+			  	}, 500);
+			};
+			doit = setTimeout(function(){
+				updateView();
+			},500);
+			
+
+			function updateView(){
+				if($(window).width() < 980){
+					$(".img-block").each(function(index, element) {
+						var line_height = 28;
+						var _e = $(element);
+						var _h = _e[0].offsetHeight;
+						var _new_margin_height = 0;
+						for(var i =1;i<200;i++){
+							var _new_height = i*line_height;
+							if(_new_height > _h){
+								_new_margin_height = _new_height - _h;
+								break;
+							}
+						}
+				    	element.style.marginBottom = (_new_margin_height + 2) + "px";
+				    });	
+				}
+			}
+
+		})
 		</script>
 	</body>
 </html>

@@ -62,8 +62,16 @@ header #header_title *{
 
 /* adjust to match lines */
 section {
-	margin-top: 12px;
-	min-height: 438px;
+	margin-top: 0px;
+	min-height: 448px;
+}
+
+section.offset-wrapper-2 {
+	margin-top: 6px;
+}
+section.empty-section {
+	min-height: 196px;
+	padding-top: 28px;
 }
 
 section .container .row img {
@@ -140,9 +148,6 @@ footer a {
 	content: url(../images/nikko-fall/icon_work.png);
 }
 
-section.empty-section {
-	min-height: 193px;
-}
 
 /* Large desktop */
 @media (min-width: 1200px) { 
@@ -157,13 +162,17 @@ section.empty-section {
 	/* adjust to match lines */
 	p {
 		font-size: 20px;
+		margin-top: 28px;
 	}
 	section {
-		margin-top: 35px;
-		min-height: 559px;
+		margin-top: 0px;
+		min-height: 560px;
+	}
+	section.offset-wrapper-2 {
+		margin-top: 33px;
 	}
 	section.empty-section {
-		min-height: 188px;
+		min-height: 196px;
 	}
 }
 
@@ -196,7 +205,6 @@ section.empty-section {
 		top: 0px;	
 		left: 0px;
 		margin-top:10px;
-		margin-bottom:10px;
 	}
 
 	/* adjust to match lines */
@@ -206,7 +214,7 @@ section.empty-section {
 		margin-bottom: 0px;
 	}
 	section.empty-section {
-		min-height: 198px;
+		min-height: 196px;
 		margin-top: 0px;
 		margin-bottom: 0px;	
 	}
@@ -250,8 +258,13 @@ section.empty-section {
 	}
 
 	/* adjust to match lines */
-	section.empty-section, section {
-		min-height: 226px;
+	section {
+		min-height: 0px ;
+		margin-top: 0px;
+		margin-bottom: 0px;
+	}
+	section.empty-section {
+		min-height: 218px ;
 		margin-top: 0px;
 		margin-bottom: 0px;
 	}
@@ -274,7 +287,7 @@ section.empty-section {
 		height: auto;
 	}*/
 	.offset-wrapper-2 {
-		margin-top: 13px;
+		margin-top: 27px;
 	}
 	
 }

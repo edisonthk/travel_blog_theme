@@ -178,38 +178,98 @@ Template Name: 秋の日光
 	        
 	    });
 
+	    Element.prototype.documentOffsetTop = function () {
+		    return this.offsetTop + ( this.offsetParent ? this.offsetParent.documentOffsetTop() : 0 );
+		};
+
+
 		$(function(){
+
+			var _windowHeight = $(window).height();
+			var scrollingEvent = function(event) {
+				$(".img-block img").each(function(index,element) {
+
+					var _bound = element.getBoundingClientRect();
+					var _34_windowHeight = _windowHeight * 3/4;
+					if(_bound.top >= _34_windowHeight && _bound.top < _windowHeight){
+						element.style.opacity = -4*_bound.top/_windowHeight + 4;
+					}else if(_bound.top < _34_windowHeight && _bound.bottom > _windowHeight/4){
+						element.style.opacity = 1;
+					}else if(_bound.bottom > 0 && _bound.bottom <= _34_windowHeight){
+						element.style.opacity = 4*_bound.bottom/_windowHeight;
+					}else{
+						element.style.opacity = 0;
+					}
+					
+				});
+			}
+
+			var updateViewAndEvent = function(){
+				_windowHeight = $(window).height();
+				if($(window).width() < 980){
+
+					$(window).unbind('scroll',scrollingEvent);
+
+					$(".img-block img").each(function(index,element) {
+						element.style.opacity = 1;
+					});
+
+					var _margin_height = 0;
+
+					$(".img-block").each(function(index, element) {
+						var line_height = 28;
+						var _e = $(element);
+						var _h = _e[0].offsetTop + _e.height();
+						
+						var _new_margin_height = 0;
+						for(var i =1;i<1000;i++){
+							var _new_offset_top = i*line_height;
+							if(_new_offset_top > _h){
+								_new_margin_height = _new_offset_top - _h;
+								_margin_height += _new_margin_height;
+								break;
+							}
+						}
+				    	element.style.marginBottom = (_new_margin_height) + "px";
+				    });	
+				}else{
+
+					_windowHeight = $(window).height();
+					$(".img-block img").each(function(index,element) {
+						var _bound = element.getBoundingClientRect();
+						var _34_windowHeight = _windowHeight * 3/4;
+						if(_bound.top < _34_windowHeight && _bound.bottom > _windowHeight/4){
+							element.style.opacity = 1;
+						}else {
+							element.style.opacity = 0;
+						}
+					});
+
+					$(window).scroll(scrollingEvent);
+				}
+			}
+
 			var doit;
 			window.onresize = function(){
 				clearTimeout(doit);
 				// doing the resizedDoneAction every 100 milliseconds
 			  	doit = setTimeout(function(){
-			  		updateView();
+			  		updateViewAndEvent();
 			  	}, 500);
 			};
-			doit = setTimeout(function(){
-				updateView();
-			},500);
 			
+			
+			var _temp_images = $(".img-block img");
+			var _count = 0;
+			_temp_images.each(function(index,element){
+				$(element).load(function(){
+					_count ++;
+					if(_count >= _temp_images.length){
+						updateViewAndEvent();
+					}
+				});
+			});
 
-			function updateView(){
-				if($(window).width() < 980){
-					$(".img-block").each(function(index, element) {
-						var line_height = 28;
-						var _e = $(element);
-						var _h = _e[0].offsetHeight;
-						var _new_margin_height = 0;
-						for(var i =1;i<200;i++){
-							var _new_height = i*line_height;
-							if(_new_height > _h){
-								_new_margin_height = _new_height - _h;
-								break;
-							}
-						}
-				    	element.style.marginBottom = (_new_margin_height + 2) + "px";
-				    });	
-				}
-			}
 
 		})
 		</script>
